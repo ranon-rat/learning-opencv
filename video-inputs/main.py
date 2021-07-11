@@ -3,7 +3,7 @@ import numpy as np
 cap=cv2.VideoCapture(0)
 while True:
     ret,frame=cap.read()
-    frame=frame.resize((500,500),(0,0),fx=0.5,fy=0.5)
+    frame=cv2.resize(frame,(500,500),fx=0.5,fy=0.5)
     kernel=np.ones((5,5),np.uint8)
     dilate=cv2.dilate(frame,kernel,iterations=5)
     cv2.imshow('frame',dilate)
