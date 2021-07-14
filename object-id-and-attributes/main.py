@@ -12,7 +12,7 @@ while True:
     threshold = cv2.adaptiveThreshold(
         blur, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV, 205, 1)
     
-    _, contours, hierarchy = cv2.findContours(
+    contours, hierarchy = cv2.findContours(
         threshold, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
     
     for i in contours:

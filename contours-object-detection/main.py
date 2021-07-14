@@ -12,7 +12,7 @@ while True:
     
     thresh=cv2.Canny(blur,30,150)
     #adaptativeTrasholding(gray,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY,115,1)
-    _,contours,hierarchy=cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
+    contours,hierarchy=cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
     frame2=frame.copy()
     index=-1
     thickness=4
